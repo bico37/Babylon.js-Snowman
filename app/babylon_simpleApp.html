@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylon App</title>
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/babylon_simpleApp.js" defer></script>
+
+    <link rel="stylesheet" href="./babylon_simpleApp.css">
+</head>
+<style>
+    
+</style>
+<body>
+    <div id="grid">
+        <canvas id="renderCanvas" touch-action="none"></canvas>
+        
+        <div id="input" style="display: none;">
+            <div id="inputContent" style="display: none;">
+                <p>Choose a color for the Hat: </p>
+                <div id="chooseColor">
+                    <div>
+                        <div class="color" id="white" onclick="changeHatColor(255, 255, 255)"></div>
+                        <div class="color" id="yellow" onclick="changeHatColor(255, 255, 0)"></div>
+                        <div class="color" id="red" onclick="changeHatColor(255, 0, 0)"></div>
+                        <div class="color" id="green" onclick="changeHatColor(0, 128, 0)"></div>
+                        <div class="color" id="blue" onclick="changeHatColor(0, 0, 255)"></div>
+                        <div class="color" id="brown" onclick="changeHatColor(123, 63, 0)"></div>
+                    </div>
+                    <br>
+                </div>
+                <p id="snowmanColorP">Choose a color for the Snowman:</p>
+                <div id="colorInput">
+                    <input type="color" value="#ffffff" id="style1" oninput="changeSnowmanColor(this)"/>
+                    <label for="style1">Style 1</label>
+                </div>
+                <p id="speedP">Choose rotate Speed:</p>
+                <div id="inputSpeed">
+                    <input type="range" name="" id="rangeSlide" min="0" max="15" oninput="changeSpeed(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
